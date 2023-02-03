@@ -1,0 +1,19 @@
+footer {
+    background-color: #455561;
+    display: block;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem 0.8rem 0.8rem 0.8rem;
+    height: 100%;
+}
+.wpp{
+    display: inline-block;
+    position: sticky;
+    background-color: #455561;
+    width: 3rem;
+}
+p {
+    font-size: 1rem;
+    color: antiquewhite;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}

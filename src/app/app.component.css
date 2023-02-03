@@ -1,0 +1,19 @@
+div {
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "formulario"
+    "footer";
+    grid-template-columns: 10fr;
+    grid-template-rows: 1.2fr 8fr 1.5fr;
+    height: 100vh;
+}
+.header {
+    grid-area: header;
+}
+.formulario {
+    grid-area: formulario;
+}
+.footer {
+    grid-area: footer;
+}

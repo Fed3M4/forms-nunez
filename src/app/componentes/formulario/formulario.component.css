@@ -4,12 +4,17 @@
     display: grid;
     grid-template-areas: 
     "img aside";
-    grid-template-columns: 3fr 3fr;
+    grid-template-columns: 3.5fr 3fr;
     grid-template-rows: 10fr;
+    background-image: url(../../../assets/img/adsakldja.png);
+    background-repeat: repeat;
+    height: 100%;
 }
-.imagenIndex {
-    width: 100%;
+.divImg {
     grid-area: img;
+}
+.imagenPos {
+    width: 390px;
 }
 .formul {
     display: flex;
