@@ -3,14 +3,22 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { HeaderComponent } from "./componentes/header/header.component";
+import { FormularioComponent } from "./componentes/formulario/formulario.component";
+
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        HeaderComponent,
+        FormularioComponent
+    ],
+    providers: [],
+    bootstrap: [AppComponent],
+    imports: [
+        BrowserModule,
+        ReactiveFormsModule,
+        FormsModule
+    ]
 })
 export class AppModule { }

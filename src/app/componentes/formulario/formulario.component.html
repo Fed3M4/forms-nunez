@@ -1,0 +1,40 @@
+<div class="divPrincipal">
+  <img src="../../../assets/img/imagen-portada-4.png" alt="modelo-pos" class="imagenIndex">
+  <div class="formul">
+    <form [formGroup]="formularioLogin" (ngSubmit)="login()" class="was-validated">
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Correo de la empresa</label>
+        <input formControlName="correo" type="email" class="form-control" id="exampleInputEmail1"
+          aria-describedby="emailHelp">
+        <div class="valid-feedback"
+          *ngIf="formularioLogin.controls['correo'].dirty && formularioLogin.controls['correo'].valid">El correo
+          ingresado es válido</div>
+        <div class="invalid-feedback"
+          *ngIf="formularioLogin.controls['correo'].dirty && formularioLogin.controls['correo'].errors?.['required']">El
+          campo correo no puede estar vacío</div>
+        <div class="invalid-feedback"
+          *ngIf="formularioLogin.controls['correo'].dirty && formularioLogin.controls['correo'].errors?.['pattern']">El
+          campo correo tiene un formato incorrecto</div>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+        <input formControlName="contrasenia" type="password" class="form-control" id="exampleInputPassword1">
+        <div class="valid-feedback"
+          *ngIf="formularioLogin.controls['contrasenia'].dirty && formularioLogin.controls['contrasenia'].valid">La
+          contraseña ingresado es válido</div>
+        <div class="invalid-feedback"
+          *ngIf="formularioLogin.controls['contrasenia'].dirty && formularioLogin.controls['contrasenia'].errors?.['required']">
+          El campo contraseña no puede estar vacío</div>
+        <div class="invalid-feedback"
+          *ngIf="formularioLogin.controls['contrasenia'].dirty && formularioLogin.controls['contrasenia'].errors?.['minlength']">
+          El campo contraseña no puede tener menos de 5 dígitos</div>
+      </div>
+      <div class="mb-3 form-check">
+        <input formControlName="recordarCredenciales" type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Recordar</label>
+      </div>
+      <button type="submit" class="btn btn-primary" [disabled]="formularioLogin.invalid">Submit</button>
+      <button type="reset" class="btn btn-danger">Reset</button>
+    </form>
+  </div>
+</div>

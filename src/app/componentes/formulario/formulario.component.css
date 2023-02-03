@@ -1,0 +1,18 @@
+/*div principal*/
+.divPrincipal {
+    padding: 1rem 0rem 1rem 0rem;
+    display: grid;
+    grid-template-areas: 
+    "img aside";
+    grid-template-columns: 3fr 3fr;
+    grid-template-rows: 10fr;
+}
+.imagenIndex {
+    width: 100%;
+    grid-area: img;
+}
+.formul {
+    display: flex;
+    width: 90%;
+    grid-area: aside;
+}
